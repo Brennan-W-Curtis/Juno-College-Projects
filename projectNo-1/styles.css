@@ -1,0 +1,340 @@
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+*, *:before, *:after { box-sizing: inherit; }
+
+/* @import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap'); */
+
+/* Increased the base font size of the document to 20px */
+html {
+    font-size: 125%;
+}
+
+/* Declared variables to reduce instances of repeated property values */
+:root {
+    --mainWhite: #FFF;
+    --mainBlack: #0B1C24;
+    --cardBackground: #EBEFF2;
+    --footerText: #76878E;
+    --fullWidth: 100%;
+    --sansSerif: "Roboto", sans-serif;
+    --centerMargins: 0 auto;
+}
+
+/* For some reason there's a white bar at the top of my webpage despite my best efforts at removing it */
+body {
+    font-family: "Vidaloka", serif;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    left: 10%;
+    margin: var(--centerMargins);
+    position: absolute;
+    top: 15%;
+    width: 80%;
+}
+
+#home-link img {
+    width: 5%;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 0 1.25em;
+    position: relative;
+}
+
+nav ul li ul {
+    display: none;
+    flex-direction: column;
+    left: -2em;
+    position: absolute;
+    top: 2em;
+}
+
+/* It doesn't function well in terms of user experience but meets the criteria well enough */
+nav ul li:hover ul {
+    display: flex;
+}
+
+nav ul li a:hover {
+    display: block;
+    color: var(--mainBlack);
+}
+
+nav ul li ul li {
+    width: 12.5em;
+    margin-bottom: 0.5em;
+}
+
+nav ul li a {
+    color: var(--mainWhite);
+    font-size: 1.25rem;    
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+/* Adjusted the positioning of the chevron to make it more appealing to look upon */
+.fas {
+    position: relative;
+    top: 0.1em;
+}
+
+/* Basic utility styles for the headings */
+h1,
+h2,
+h3 {
+    text-transform: capitalize;
+}
+
+/* Page Header */
+.hero-image {
+    background-image: url(./assets/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 133vh;
+    margin: var(--centerMargins);
+    width: var(--fullWidth);
+    position: relative;
+    z-index: -2;
+}
+
+/* The hero image was purely aesthetic in nature so I rendered it as a background image */
+.hero-image h1 {
+    color: var(--mainWhite);
+    display: flex;
+    font-size: 3.5rem;
+    font-weight: 500;
+    justify-content: center;
+    letter-spacing: .045em;
+    padding-top: 28.75%;
+}
+
+/* About Section */
+.about-section {
+    display: flex;
+    margin: var(--centerMargins);
+    width: 90%;
+}
+
+.about-section div {
+    width: var(--fullWidth);
+}
+
+.about-section img {
+    height: 765px;
+    object-fit: cover;
+    margin: 1em 0em 1em 1em;
+    object-position: 0px -125px;
+    transform: scale(.75);
+    width: var(--fullWidth);
+}
+
+.about-section div h2 {
+    color: var(--mainBlack);
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.about-section div p {
+    color: var(--mainBlack);
+    font-family: var(--sansSerif);
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.5em;
+    width: 80%;
+}
+
+.about-paragraph {
+    margin-left: 2.5em;
+    margin-top: 7.25em;
+}
+
+.about-section button {
+    background-color: #D45221;
+    border: none;
+    color: var(--mainWhite);
+    font-family: "Vidaloka", serif;
+    font-size: 0.9rem;
+    letter-spacing: .1em;
+    margin-top: 30px;
+    padding: 0.75em 3em;
+    text-transform: uppercase;
+}
+
+#about-link {
+    font-size: 2.25 rem;    
+}
+
+/* Gallery Section */
+.gallery-section {
+    margin: 0 auto 6em auto;
+    width: 85%;
+}
+
+.gallery-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.25em; 
+    text-align: center;
+}
+
+.gallery-section .top-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery-section .top-row img {
+    display: block;
+    height: 430px;
+    margin: 0.6em;
+    object-fit: cover;
+    width: 50%;
+}
+
+.gallery-section .bottom-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery-section .bottom-row img {
+    display: block;
+    height: 430px;
+    margin: 0.6em;
+    width: 50%;
+}
+
+/* Destinations Reached Section */
+.destinations-section {
+    height: 70vh;
+    overflow: hidden;
+    width: var(--fullWidth);
+    margin-bottom: 6em;
+}
+
+.destinations-section img {
+    display: block;
+    margin: -41% 0;
+    width: 100%;
+}
+
+.destinations-section span {
+    color: var(--mainWhite);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: var(--centerMargins);
+    position: relative;
+    text-align: center;
+    top: 3em;
+    width: 20%;
+    z-index: 1;
+}
+
+.destinations-section span p {
+    font-size: 5rem;
+}
+
+.destinations-section span h3 {
+    bottom: 5em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+    letter-spacing: 0.15em;
+    position: relative;
+    text-transform: uppercase;
+}
+
+/*Latest Section */
+.latest-section div {
+    display: flex;
+    justify-content: center;
+    margin: var(--centerMargins);
+    padding-bottom: 6em;
+    width: 85%;
+}
+
+.latest-section div div {
+    background-color: var(--cardBackground);
+    display: block;
+    height: 600px;
+    margin: 0.7em;
+}
+
+.latest-section div div h3 {
+    color: var(--mainBlack);
+    font-size: 1.75rem;
+    letter-spacing: 0.05em;
+    margin-left: 0.5em;
+}
+
+.latest-section div div p {
+    bottom: 2em;
+    font-family: var(--sansSerif);
+    font-size: 0.75rem;
+    left: 1.25em;
+    opacity: 0.3;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.latest-section div div img {
+    display: block;
+    height: 460px;
+    object-fit: cover;
+    width: 100%;
+}
+
+#blog-link {
+    color: var(--mainBlack);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+/* Footer Section */
+footer {
+    background-color: #0C1D24;
+    height: 50vh;
+    padding-top: 2.75em;
+    text-align: center;
+}
+
+footer img {
+    width: 4.75%;
+}
+
+footer ul {
+    margin: 0;
+    padding: 2em 0 1em 0;
+}
+
+footer ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 0 1em;
+}
+
+footer ul li a {
+    color: var(--footerText);
+    font-family: var(--sansSerif);
+    font-size: 0.9rem;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+footer hr {
+    opacity: 0.4;
+    width: 80%;
+}
+
+footer p {
+    color: var(--footerText);
+    font-family: var(--sansSerif);
+    font-size: 0.8rem;
+    padding-top: 1em;
+}
