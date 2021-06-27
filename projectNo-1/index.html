@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Links to the fonts used within the project reference images -->
+    <link href="https://fonts.googleapis.com/css2?family=Vidaloka&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet"> 
+    <!-- Link accessing the Font Awesome Icon library -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <title>1st Juno College Project</title>
+</head>
+<body>
+    <header>
+        <nav id="home-link">
+            <img src="./assets/logo.png" alt="Juno College Brand Logo">
+            <ul>
+                <li><a href="#about-link">about</a></li>
+                <li>
+                    <!-- An icon that indicated the user has more content was available to browse  -->
+                    <a href="#blog-link">blog <i class="fas fa-angle-down"></i></a>
+                    <!-- A hidden dropdown menu with links to relevant content on the page -->
+                    <ul class="dropdown-menu">
+                        <li><a href="#first-blog">golden state</a></li>
+                        <li><a href="#second-blog">11 cities in 12 days</a></li>
+                        <li><a href="#third-blog">year in awe</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact-link">contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero-image">
+            <h1>the journal</h1>
+        </div>
+    </header>
+    <main>
+        <section class="about-section">
+            <div>
+                <img src="./assets/image1.jpg" alt="A person holding the Norwegian flag above their head while they overlook a mountainous landscape">
+            </div>
+            <div class="about-paragraph">
+                <h2 id="about-link">about</h2>
+                <p>Manifestation spirit guides quartz, Reiki practitioner stones oracle Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid a voluptatibus quam enim cupiditate excepturi quas. Deleniti nam eum rem consequatur officiis culpa perspiciatis unde tempora temporibus quibusdam placeat facilis, iste libero natus autem maxime repudiandae, laborum reprehenderit. Earum reprehenderit incidunt exercitationem adipisci dolorem! Harum, fuga labore voluptatibus facilis deserunt sapiente quaerat enim minima aperiam iusto ut, necessitatibus quisquam nesciunt!</p>
+                <button>say hello</button>
+            </div>
+        </section>
+        <!-- To make the page content more accomodating I split the gallery into two separate rows -->
+        <section class="gallery-section">
+            <h2>Gallery</h2>
+            <div class="top-row">
+                <img src="./assets/image6.jpg" alt="A view from looking out the right side window of a commercial plane during sunset">
+                <img src="./assets/image7.jpg" alt="A small and quaint wooden cabin at the foot of a snow covered forest overlooking a frozen over lake">
+                <img src="./assets/image8.jpg" alt="An aerial view of desert canyons and the sparse trees that dot the path winding along their bases">
+            </div>
+            <div class="bottom-row">
+                <img src="./assets/image9.jpg" alt="An aerial view of a city by the beach densely crowded with white buildings that have orange roofs">
+                <img src="./assets/image10.jpg" alt="The front view of a stone building with beautifully intricate and ornate stone work in front of a blue clear sky">
+            </div>
+        </section>
+        <section class="destinations-section">
+            <span>
+                <p>36</p>
+                <p>/</p>
+                <p>127</p>
+                <h3>destinations reached</h3>
+            </span>
+            <img src="./assets/image2.jpg" alt="A person walking across a stone littered snow hill with heavy fog overhead">
+        </section>
+        <section class="latest-section">
+            <h2 id="blog-link">latest</h2>
+            <div>
+                <div>
+                    <img src="./assets/image3.jpg" alt="The Golden Gate Bridge from the perspective of a pedestrian on it">
+                    <h3 id="first-blog">golden state</h3>
+                    <p>feb 26</p>
+                </div>
+                <div>
+                    <img src="./assets/image4.jpg" alt="An aerial view of a European city street with a train in the center">
+                    <h3 id="second-blog">11 cities in 12 days</h3>
+                    <p>feb 1</p>
+                </div>
+                <div>
+                    <img src="./assets/image5.jpg" alt="A white stone villa in front of a clear blue sky">
+                    <h3 id="third-blog">year in awe</h3>
+                    <p>jan 27</p>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <img src="./assets/logo.png" alt="Juno College Brand Logo">
+            <ul>
+                <li><a href="#home-link">home</a></li>
+                <li><a href="#about-link">about</a></li>
+                <li><a href="#blog-link">blog</a></li>
+                <li><a href="#contact-link">contact</a></li>
+            </ul>
+            <hr>
+            <p>Created at Juno College of Technology</p>
+        </footer>
+    </main>
+</body>
+</html>
