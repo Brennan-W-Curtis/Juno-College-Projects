@@ -1,0 +1,897 @@
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+
+/* Imported Styles */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+/* Notes
+Sorry, I don't know how I missed it but I repeatedly failed to notice there is a specific asset for the arrow. Instead of using that I created a makeshift one by using pseudo elements.
+*/
+
+/* Declared Variables */
+:root {
+    --primaryColor: #B18F39;
+    --primaryWhite: #F4F3F0;
+    --primaryGray: #9C9B98;
+    --primaryBlack: #000000;
+    --primaryFont: 'Open Sans', sans-serif;
+}
+
+/* Code Debugging */
+/* * {
+    border: 1px solid red;
+} */
+
+/* Remove Default Styling */
+body,
+ul,
+h1,
+h2,
+h3,
+p {
+    font-family: var(--primaryFont);
+	margin: 0;
+	padding: 0;
+}
+
+html, 
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+	text-decoration: none;
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+
+/* General Utility Styling */
+body {
+    background-color: var(--primaryWhite);
+}
+
+header .wrapper,
+.practice-section .wrapper,
+.spotlight-section .wrapper,
+.contact-section .wrapper,
+.testimonial-section .wrapper,
+.contact-details .wrapper,
+footer .wrapper {
+    margin: 0 auto;
+    min-width: 300px;
+    width: 90%;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+h2::after {
+    background-color: var(--primaryColor);
+    content: "";
+    display: block;
+    height: 2.5px;
+    margin-top: 0.5em;
+    max-width: 57.5px;
+    width: 18.5%;
+}
+
+main p {
+    font-size: 1.7rem;
+    margin: 1.5em auto;
+    line-height: 1.75em;
+    width: 100%;
+}
+
+.section-title {
+    font-size: 2.25rem;
+}
+
+/* Navigation Bar */
+.navigation-bar {
+    display: flex;
+    justify-content: space-between;
+    margin: 2.5em 0em;
+    position: relative;
+    width: 100%;
+}
+
+.navigation-bar .brand-logo {
+    align-self: flex-end;
+    bottom: 0.2em;
+    font-size: 2.45rem;
+    letter-spacing: 0.1rem;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.navigation-bar .mobile-menuIcon {
+    align-self: flex-start;
+    border-bottom: 2px solid var(--primaryBlack);
+    border-top: 2px solid var(--primaryBlack);
+    font-size: 1.65rem;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    padding: 0.5em 0.07em 0.5em 0.07em;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.desktop-menu {
+    display: none;
+    position: absolute;
+}
+
+/* Header Section */
+header .wrapper div h1 {
+    font-size: calc(2.3rem + 0.5vw);
+    line-height: 1.5em;
+    margin: 3em auto;
+    text-align: center;
+    width: calc(80vw - 20%);
+}
+
+/* Despite my best efforts I was unsuccessful at finding a means of keeping the badge positioned at the top of the image consistently. */
+.badge-container {
+    margin: 0 auto;
+    max-width: 150px;
+    position: relative;
+    width: 30%;
+}
+
+.badge-image {
+    max-width: 100%; 
+    position: absolute;
+    top: -4em;
+}
+
+.headerImage-container {
+    margin: 5em 0;
+}
+
+/* Practice Section */
+.practice-section {
+    margin: 5em 0em;
+}
+
+.practice-section a {
+    background-color: var(--primaryColor);
+    color: white;
+    display: block;
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    margin: 1.5em auto;
+    padding: 1em 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.practiceSection-containers {
+    display: block;
+    margin-top: 12em;
+    width: 100%;
+}
+
+.practiceImage-containers {
+    position: relative;
+    width: 60%;
+}
+
+.practiceImage-containers img {
+    height: 245px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.practice-imageTwo {
+    bottom: 7.25em;
+    left: calc(100% - 31%);
+    position: absolute;
+    z-index: -10;
+}
+
+/* Spotlight Section */
+.spotlight-section {
+    margin: 7.5em 0em 5em 0em;
+}
+
+.spotlight-card {
+    position: relative;
+    margin: 1.5em 0;
+}
+
+.cardImage-container {
+    width: 100%;   
+}
+
+.cardImage-container::after {
+    content: "";
+    background-color: white;
+    display: block;
+    height: 4.5em;
+    width: 100%;
+}
+
+.cardImage-container p {
+    bottom: 0.75em;
+    font-size: 1.4rem;
+    font-weight: 600;
+    left: 0.75em;
+    letter-spacing: 0.1rem;
+    margin: 0;
+    position: absolute;
+    text-transform: uppercase;
+}
+
+.spotlight-card img {
+    display: block;
+    height: 250px;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+/* Contact Section */
+.contact-section {
+    background-image: url(./Option1-assets/image8.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 6.5em 0em 3em 0em;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+    border: 1px solid var(--primaryColor);
+}
+
+.contact-form input {
+    margin-bottom: 1em;
+    padding: 1.25em;
+}
+
+.form-inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.email-input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contact-form textarea {
+    padding: 1.25em;
+    resize: none;
+}
+
+.contact-form button {
+    background-color: var(--primaryColor);
+    border: none;
+    color: white;
+    display: block;
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    margin: 1.5em auto;
+    padding: 1em 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+/* Testimonial Section */
+.testimonial-section {
+    margin: 0em 0em 7em 0em;
+}
+
+.testimonial-section .wrapper h2 {
+    margin: 2.5em 0 2em 0; 
+}
+
+.testimonial-section .wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.client-testimonial {
+    font-size: 2.25rem;
+    width: 100%;
+}
+
+.testimonial-details {
+    position: relative;
+}
+
+.testimonial-details p {
+    margin: 0;
+    padding: 0.1em 0 0 1.25em;
+    width: 100%;
+}
+
+.testimonial-details img {
+    position: relative;
+}
+
+.testimonial-details::before {
+    background-color: var(--primaryColor);
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 6px;
+}
+
+.testimonial-card {
+    display: flex;
+    left: 2.5em;
+    margin-bottom: 5em;
+    position: relative;
+    top: 3em;
+    width: 100%;
+}
+
+.client-information p {
+    margin-top: 0.2em;
+    width: 100%;
+}
+
+.client-information .testimonial-name {
+    font-size: 2.1rem;
+    font-weight: 600;
+    position: relative;
+    top: 0.45em;
+}
+
+.client-information .testimonial-company {
+    font-size: 1.45rem;
+    left: 0.45em;
+    letter-spacing: 0rem;
+    position: relative;
+    top: 0.5em;
+}
+
+.testimonialImage-container {
+    max-width: 30%;
+    width: 100px;
+}
+
+.testimonialImage-container img {
+    border-radius: 50%;
+    max-width: 100%;
+}
+
+.fas {
+    bottom: 0%;
+    color: var(--primaryColor);
+    font-size: 1.4rem;
+    position: absolute;
+    left: 95%;
+}
+
+.fas::after {
+    content: "";
+    background-color: var(--primaryColor);
+    bottom: 0.6em;
+    display: block;
+    height: 2.25px;
+    position: relative;
+    right: 100%;
+    width: 7em;
+}
+
+/* Footer Section */
+footer {
+    text-transform: capitalize;
+}
+
+.footer-imageContainer {
+    margin: 0em 0em 4em 0em;
+    max-width: 100%;
+}
+
+.footer-image {
+    height: 185px;
+    object-fit: cover;
+    position: relative;
+    width: 100%;
+}
+
+.contact-details .brand-logo {
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
+    margin: 2em 0em 1em 0em;
+    text-transform: uppercase;
+    padding: 0;
+}
+
+.contact-details {
+    font-size: 1.8rem;
+}
+
+.address-details,
+.region-details,
+.number-details,
+.email-details {
+    margin: 0;
+    padding: 0;
+}
+
+.address-details {
+    margin-bottom: 0.5em;
+}
+
+.region-details,
+.number-details {
+    margin-bottom: 1.5em;
+}
+
+.email-details::after {
+    background-color: rgba(0, 0, 0, 0.2);
+    content: "";
+    display: block;
+    height: 1px;
+    margin: 2.5em 0em 2em 0em;
+    width: 100%;
+}
+
+.footer-navigation div p {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 1em 0em;
+}
+
+.list-titles {
+    margin-bottom: 4.25em;
+}
+
+.menu-list,
+.projects-list,
+.follow-list {
+    display: flex;
+    margin-bottom: 4.25em;
+}
+
+.menu-list li a,
+.projects-list li a,
+.follow-list li a {
+    font-size: 1.85rem;
+    margin-right: 1.25em;
+    text-decoration: underline;    
+}
+
+footer .wrapper .copyright-notice {
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 1.6rem;
+    margin-bottom: 3.5em;
+    text-align: center;
+    text-transform: none;
+}
+
+footer .wrapper .copyright-notice::before {
+    background-color: rgba(0, 0, 0, 0.2);
+    content: "";
+    display: block;
+    height: 1px;
+    margin-bottom: 1.5em;
+    width: 100%;
+}
+
+/* Portrait tablet and small desktops */
+@media (min-width: 940px) {
+
+    /* General Utility Styling */
+    header .wrapper,
+    .practice-section .wrapper,
+    .spotlight-section .wrapper,
+    .contact-section .wrapper,
+    .testimonial-section .wrapper,
+    .contact-details .wrapper,
+    footer .wrapper {
+        margin: 0 auto;
+        max-width: 1020px;
+        width: 85%;
+    }
+
+    .practice-section h2::after {
+        background-color: var(--primaryColor);
+        content: "";
+        display: block;
+        height: 2.5px;
+        margin-top: 0.5em;
+        width: 13%;
+    }
+
+    h2::after {
+        width: 5.5%;
+    }
+
+    main p {
+        font-size: 1.65rem;
+        line-height: 1.75em;
+        margin: 1.5em auto;
+        width: 100%;
+    }
+
+    .section-title {
+        font-size: 3.25rem;
+    }
+
+    /* Navigation Bar */
+    .navigation-bar {
+        display: flex;
+        justify-content: space-between;
+        margin: 2.5em 0em;
+        max-width: 1200px;
+        width: 100%;
+    }
+
+    .navigation-bar .mobile-menuIcon {
+        display: none;
+    }
+
+    .navigation-bar .desktop-menu {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .desktop-menu li {
+        margin-left: 3em;
+    }
+
+    .desktop-menu li a {
+        font-size: 1.85rem;
+        text-transform: uppercase;
+    }
+  
+    /* Header Section */
+    header .wrapper div h1 {
+        font-size: 3.75rem;
+        line-height: 1.5em;
+        margin: 2em auto;
+        text-align: center;
+        width: 60%;
+    }
+
+    .badge-container {
+        width: 30%;
+    }
+
+    .badge-image {
+        max-width: 100%; 
+        position: absolute;
+        top: -6.75em;
+    }
+
+    .headerImage-container {
+        margin: 5em 0;
+    }    
+
+    .headerImage-container .header-image {
+        height: 445px;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    /* Practice Section */
+    .practice-section {
+        margin: 15em 0em;
+    }
+
+    .practice-section .wrapper {
+        display: flex;
+    }
+
+    .practiceSection-content {
+        width: 40%;
+    }
+
+    .practiceSection-content p {
+        width: 105%;
+    }
+
+    .practiceSection-content a {
+        margin: 0;  
+        width: 47%;
+    }
+
+    .practiceSection-containers {
+        margin: 0;
+        width: 55%;
+    }
+
+    .practiceImage-containers {
+        position: relative;
+        width: 75%;
+    }
+    
+    .practiceImage-containers img {
+        height: 540px;
+        object-fit: cover;
+        transform: scale(0.8);
+        width: 100%;
+    }
+
+    .practice-imageOne {
+        left: 2.8em;
+        position: relative;
+        top: 8.5em;
+     }
+    
+    .practiceImage-containers .practice-imageTwo {
+        bottom: 12em;
+        left: calc(100% - 43.75%);
+        height: 500px;
+        object-position: 0 -6em;
+        position: absolute;
+        z-index: -10;
+    }
+
+    /* Spotlight Section */
+    .spotlight-section .wrapper p {
+        margin: 2em 0em;
+        width: 40%;
+    }
+
+    .spotlight-topRow,
+    .spotlight-bottomRow {
+        display: flex;
+        justify-content: space-between;
+    }
+   
+    .spotlight-topRow
+    .spotlight-card {
+        margin: 0.6em;
+        width: calc(100% / 2);
+    }
+
+    .spotlight-bottomRow
+    .spotlight-card {
+        margin: 0.6em;
+        width: calc(100% / 3);
+    }
+    
+    .spotlight-card {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .cardImage-container img {
+        height: 365px;
+    }
+
+    .cardImage-container::after,
+    .mobile-spotlightTitles {
+        display: none;
+    }
+
+    .cardImage-container .desktop-spotlightTitles {
+        background-color: white;
+        bottom: -3.5%;
+        display: absolute;
+        font-size: 1.45em;
+        height: 42.5px;
+        left: 60%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .cardImage-container .spotlight-titleOne {
+        left: 60.5%;
+        min-width: 30.5%;
+        padding-top: 0.65em;
+    }
+
+    .cardImage-container .spotlight-titleTwo {
+        left: 60%;
+        min-width: 30.5%;
+        padding-top: 0.65em;
+    }
+
+    .cardImage-container .spotlight-titleThree {
+        left: 60.2%;
+        min-width: 40%;
+        padding: 0.65em 0 0 0.5em;
+    }
+
+    .cardImage-container .spotlight-titleFour {
+        left: 54%;
+        min-width: 46%;
+        padding: 0.65em 0 0 0.5em;
+    }
+
+    .cardImage-container .spotlight-titleFive {
+        left: 68%;
+        min-width: 10%;
+        padding: 0.65em 1.5em 0 0;
+    }
+    
+    .spotlight-section {
+        margin-bottom: 7.5em;
+    }
+
+    /* Contact Section */
+    .contact-section {
+        padding-bottom: 5em;
+    }
+
+    .contact-section .section-title {
+        margin: 1em 0;
+    }
+
+    .contact-section p {
+        margin: 1em 0 2em 0;
+        width: 40%;
+    }
+
+    .contact-section form {
+        width: 65%;
+    }
+
+    .contact-form label {
+        font-size: 1.5rem;
+        margin-bottom: 0.5em;
+    }
+    
+    .form-inputs {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 0.5em;
+    }
+
+    .name-input {
+        display: flex;
+        flex-direction: column;
+        margin-right: 1.5em;
+        width: 45%;
+    }
+
+    .email-input {
+        display: flex;
+        flex-direction: column;
+        width: 55%;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        padding: 1.5em;
+    }
+
+    .contact-section button {
+        border: none;
+        margin: 2.5em 0;
+        font-size: 1.5rem;
+        font-weight: 600;
+        width: 30%;
+    }
+
+    /* Testimonial Section */
+    .testimonial-details::before {
+        height: 95%;
+    }
+
+    .client-testimonial {
+        font-size: 3rem;
+        max-width: 70%;
+    }
+
+    .testimonial-card {
+        left: 4em;
+        margin-top: 2em;
+        position: relative;
+    }
+
+    .client-information .testimonial-name {
+        font-size: 2.5rem;
+    }
+
+    .client-information .testimonial-company {
+        font-size: 1.7rem;
+    }
+
+    .testimonialImage-container {
+        width: 11.5%;
+    }
+
+    .fas {
+        bottom: 4.5em;
+        font-size: 1.6rem;
+        left: 70%;
+    }
+
+    /* Footer Section */
+    .footer-image {
+        height: 325px;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-contact {
+        bottom: 3em;
+        position: relative;
+    }
+
+    .contact-details {
+        margin-bottom: 1em;
+    }
+
+    .footer-navigation {
+        display: flex;
+    }
+
+    .email-details::after {
+        display: none;
+    }
+
+    .footer-navigation div .list-titles {
+        margin-bottom: 2em;
+    }
+
+    .footer-navigation div {
+        left: 4.25em;
+        margin: 0 2.5em;
+        position: relative;
+        top: 1em;
+    }
+
+    .menu-list,
+    .projects-list,
+    .follow-list {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 4.25em;
+    }
+
+    .menu-list li,
+    .projects-list li,
+    .follow-list li {
+        margin-bottom: 1.25em;
+    }
+
+    .copyright-notice {
+        align-items: flex-start;  
+        display: flex;
+        flex-direction: column;
+        position: relative; 
+    }
+
+    footer .wrapper .copyright-notice::before {
+        margin-bottom: 1em;
+    }
+}
