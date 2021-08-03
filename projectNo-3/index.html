@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <title>Flashcard Game</title>
+</head>
+<body>
+    <main>
+        <!-- Game Statistics -->
+        <aside>
+            <div class="wrapper">
+                <div class="information-bar">
+                    <div class="deck-type">
+                        <p class="capitalize">Deck:</p>
+                        <p class="capitalize">Learning JavaScript</p>
+                    </div>
+                    <div class="flashcard-number">
+                        <p class="capitalize">Card:</p>
+                        <p class="current-flashcard"></p>
+                    </div>
+                    <div class="player-score">
+                        <p class="capitalize">Score:</p>
+                        <p class="score">0</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- Game Interface -->
+        <section class="flashcard">
+            <div class="wrapper">
+                <div class="flashcard-body">
+                    <div class="flashcard-question">
+                        <h2 id="current-question">Hello User, this is a simple flashcard game.</h2>
+                    </div>
+                    <div class="flashcard-options">
+                        <div class="choice-container hide-button">
+                            <p class="choice" id="choice-1">1st Choice</p>
+                            <span id="first-symbol"></span>
+                        </div>
+                        <div class="choice-container hide-button">
+                            <p class="choice" id="choice-2">2nd Choice</p>
+                            <span id="second-symbol"></span>
+                        </div>
+                        <div class="choice-container hide-button">
+                            <p class="choice" id="choice-3">3rd Choice</p>
+                            <span id="third-symbol"></span>
+                        </div>
+                    </div>
+                    <div id="start-button">Start</div>
+                    <div id="user-message"></div>
+                </div>
+                <p class="juno-college">Created at <a href="https://junocollege.com/">Juno College</a></p>
+            </div>
+        </section>
+    </main>
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+    <script src="flashcard.js"></script>
+</body>
+</html>
