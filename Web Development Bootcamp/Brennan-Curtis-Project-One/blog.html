@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tulpen+One&display=swap"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chathura:wght@400;700&display=swap"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Bar-One</title>
+</head>
+<body>
+    <!-- Blog Header -->
+    <header role="banner" class="blogHeader">
+        <div class="wrapper">
+            <!-- Desktop Menu -->
+            <nav role="navigation" class="desktopMenu">
+                <ul class="navigationMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="index.html" class="brandLogo">Bar-One</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Responsive Menu -->
+            <nav role="navigation" class="responsiveMenu">
+                <a href="index.html" class="brandLogo">Bar-One</a>
+                <label for="slidingMenu"><i class="fas fa-bars"></i></label>
+                <input type="checkbox" id="slidingMenu" name="slidingMenu" />
+                <ul class="slidingMenu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="blogHeadline">
+                <h1>Blog</h1>
+            </div>
+        </div>
+    </header>
+    <!-- Blog Article -->
+    <main role="main" class="blogMain">
+        <section class="blogSection">
+            <div class="wrapper">
+                <article class="menuArticle">
+                    <!-- Header Image -->
+                    <div class="articleHeader">
+                        <div class="imageContainer">
+                            <img src="./assets/post-image.jpg" alt="Several vegetable based appetizers are placed on a black bar countertop including a salad, a green bruschetta, salad on an avocadom, and soup.">
+                        </div>
+                    </div>
+                    <!-- Article Content -->
+                    <div class="articleBody">
+                        <div class="articleContent">
+                            <div class="articleText">
+                                <div class="articleHeadline">
+                                    <h3>New Menu!</h3>
+                                    <p class="datePosted">Monday January 30, 2019 by Saron</p>
+                                </div>
+                                <div class="articleParagraphs">
+                                    <p>Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquom.</p>
+                                    <p>In imperdiet eros id lacus vestibulum vestibulum. Suspendisse fermentum sem sagittis ante venenatis egestos quis vel justo. Maecenas semper suscipit nunc, sed aliquam sapien convallis eu. Nulla ut turpis in diam dapibus consequat. Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacu.</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet. Sed sit amet arcu aliquet, molestie justo at, auctor nunc. Phasellus ligula ipsum, volutpat eget semper id, viverra eget nibh. Suspendisse luctus mattis cursus. Nam consectetur ante at nisl hendrerit gravida. Donec vehicula rhoncus mattis. Mauris dignissim semper mattis. Fusce porttitor a mi at suscipit.</p>
+                                    <p>Praesent facilisis dolor sapien, vel sodales augue mollis ut. Mouris venenatis magna eu tortor posuere luctus. Aenean tincidunt turpis sed dui aliquam vehicula.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </article>
+            </div>
+        </section>
+        <!-- Article Comments -->
+        <section class="articleComments">
+            <div class="wrapper">
+                <div class="commentSection">
+                    <div class="commentsHeadline">
+                        <h4>Comments:</h4>
+                    </div>
+                    <article class="sulaireComment">
+                        <div class="imageContainer">
+                            <img src="./assets/comment-image-1.jpg" alt="Sulaire's profile picture is of her facing left while looking at the camera in front of a lush green background.">
+                        </div>
+                        <div>
+                            <p class="datePosted">Tuesday October 9th, 2019 by Sulaire</p>
+                            <p class="userComment">Fusce vehicula dolor arcu, sit amet blandit dolor mallis nec. Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin ultrices. Donec euismad scelerisque ligula. Maecenas eu varius risus.</p>
+                        </div>
+                    </article>
+                    <article class="renzoComment">
+                        <div class="imageContainer">
+                            <img src="./assets/comment-image-2.jpg" alt="Renzo's profile picture is of him facing left while looking down as his hand holds back the front of his hair.">
+                        </div>
+                        <div>
+                            <p class="datePosted">Wednesday October 10th, 2019 by Renzo</p>
+                            <p class="userComment">Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sallicitudin ipsum quis nunc sallicitudin ultrices. Donec euismod scelerisque ligula.</p>
+                        </div>
+                    </div>
+                </article>
+                <!-- Comment Form -->
+                <div class="commentForm">
+                    <form action="" role="form">
+                        <div class="userInformation">
+                            <fieldset>
+                                <legend>Name</legend>
+                                <label for="nameInput" class="sr-only">Name</label>
+                                <input type="text" name="nameInput" id="nameInput">
+                            </fieldset>
+                            <fieldset>
+                                <legend>Email Address</legend>
+                                <label for="emailInput" class="sr-only">Email Address</label>
+                                <input type="email" name="emailInput" id="emailInput">
+                            </fieldset>
+                        </div>
+                        <div class="userMessage">
+                            <label for="commentInput" class="sr-only">Comment</label>
+                            <textarea name="commentInput" id="commentInput" rows="10" placeholder="Comment"></textarea>
+                            <button type="submit">Post Comment</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- Aside Section -->
+        <aside class="asideSection">
+            <div class="asideContent">
+                <div class="wrapper">
+                    <div class="imageContainer">
+                        <img src="./assets/sidebar-image.jpg" alt="A person holding a tall glass of beer under a tap while filling it to the brim.">
+                    </div>
+                    <div class="missionContent">
+                        <h3>Our mission</h3>
+                        <p>Nam dapibus nisi vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum.</p>
+                        <a href="#">Find out more.</a>
+                    </div>
+                    <div>
+                        <h3>Recent Posts</h3>
+                        <ul class="postsList">
+                            <li><span>Donec facilisis tortor ut</span></li>
+                            <li><span>Augue lacinia at viverra</span></li>
+                            <li><span>Semper sed sapien metus</span></li>
+                            <li><span>Scelerisque nec pharetra id</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <p>Copyright &copy; 2021 Juno College</p>
+    </footer>
+    <script src="./scripts/responsiveMenu.js"></script>
+</body>
+</html>
