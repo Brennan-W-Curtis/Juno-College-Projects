@@ -1,0 +1,64 @@
+.aboutSection {
+    background: $primaryBlack;
+    padding: 5rem 0;
+}
+
+.aboutList {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 0 auto;
+    width: 80%;
+    padding-top: 3rem;
+    margin: 3rem auto;
+
+    li {
+        display: flex;
+        width: 50%;
+        flex: 1 0 auto;
+        
+        .iconContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $secondaryColour;
+            width: 2.75rem;
+            height: 2.75rem;
+            border-radius: 50%;   
+            position: relative;
+            top: 5%;
+            margin-right: .75rem; 
+        }
+
+    }
+
+    li:nth-child(1),
+    li:nth-child(2) {
+        margin-bottom: 3rem;
+    }
+
+    .fas {
+        color: white;
+        font-size: 1.5rem;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+    }
+
+    h3, p {
+        font-family: $secondaryFont;
+        color: white;
+    }
+
+    h3 {
+        font-size: 3.4rem;
+    }
+
+    p {
+        font-size: 1.99rem;
+        line-height: 1.5rem;
+        letter-spacing: 1.9px;
+        width: 100%;
+    }
+
+}
+
