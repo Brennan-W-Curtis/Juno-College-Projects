@@ -1,0 +1,28 @@
+.contactHeader {
+    background: url(../assets/contact-header-1.jpg);
+    height: 90vh;
+    padding: 2rem 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .wrapper {
+        width: 90%;
+    }
+
+    .contactHeadline {
+        display: flex;
+        align-items: center;
+        height: 90vh;
+    }
+
+    h1 {
+        color: white;
+        font-family: $secondaryFont;
+        font-size: 4.16rem;
+        letter-spacing: 2.6px;
+        line-height: 94.7px;
+        position: relative;
+        left: 30%;
+    }
+
+}
