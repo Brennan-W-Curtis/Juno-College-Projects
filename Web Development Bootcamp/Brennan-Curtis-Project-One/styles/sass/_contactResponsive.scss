@@ -1,0 +1,85 @@
+@media (max-width: 1480px) {
+
+    .contactInformation {
+        height: 100vh;
+    
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            flex: 1 0 auto;
+        }
+        
+    }
+
+    .contactContent {
+        width: 90%;
+        margin-bottom: 2rem;
+
+        .socialMedia {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            flex: 1 0 auto;
+            width: 37.5%;
+
+            li {
+                margin-right: .5rem;
+            }
+        }
+
+    }
+
+    .formContent {
+        width: 100%;
+        position: relative;
+    
+        .contactForm {
+            display: flex;
+            align-items: center;
+            box-shadow: 20px 20px $primaryColour;
+            background-color: $darkPrimary;
+            position: relative;
+            padding-top: 1rem;
+            height: 70vh;
+            width: 90%;
+            left: 0;
+            bottom: 0;
+        }
+
+    }
+
+    form {
+        width: 100%;
+
+        .userInformation {
+
+            fieldset {
+                width: 100%;
+            }
+
+            input[type="text"],
+            input[type="email"] {
+                width: 100%;
+                max-width: 100%;
+            }
+            
+        }
+        
+    }
+    
+}
+
+@media (max-width: 980px) {
+
+    .userInformation {
+
+        input[type="text"],
+        input[type="email"] {
+            border: none;
+            border-bottom: 1px solid white;
+            max-width: 100%;
+        }
+        
+    }
+
+}
