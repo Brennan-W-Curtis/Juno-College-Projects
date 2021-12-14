@@ -1,0 +1,16 @@
+.gallerySection {
+    background-color: $darkPrimary;
+    padding: 5rem 0;
+}
+
+.galleryList {
+    display: flex;
+    justify-content: center;
+    flex: 1 0 auto;
+    width: 100%;
+
+    li:nth-child(2) {
+        margin: 0 1.5rem;
+    }
+
+}
