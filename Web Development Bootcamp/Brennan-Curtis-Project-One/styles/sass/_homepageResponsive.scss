@@ -1,0 +1,222 @@
+@media (max-width: 1680px) {
+
+    .headerContent {
+    
+        .headerImage {
+    
+            .imageContainer {
+                visibility: hidden;
+            }
+    
+        }
+    
+    }
+
+    .aboutList {
+        padding-top: 0;
+        margin: 0 auto;
+    }
+    
+    .pagesSection {
+
+        .wrapper {
+            width: 100%;
+        }
+
+    }
+
+    .hostingSection {
+        
+        .wrapper {
+            width: 100%;
+        }
+
+    }
+
+}
+
+@media (max-width: 1480px) {
+
+    .pagesSection {
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "PLNIMG"
+                "PLNCNT"
+                "LCTIMG"
+                "LCTCNT"
+            ;
+
+            .planImage,
+            .planContent,
+            .locationContent,
+            .locationImage {
+                width: 100%;
+            }
+
+            .planImage {
+                grid-area: PLNIMG;
+                justify-content: center;
+            }
+
+            .planContent {
+                grid-area: PLNCNT;
+                margin: 3rem 0;
+            }
+
+            .locationContent {
+                grid-area: LCTCNT;
+            }
+
+            .locationText {
+                justify-content: flex-start;
+                margin: 3rem 0;
+            }
+            
+            .locationImage {
+                grid-area: LCTIMG;
+                justify-content: center;
+            }
+
+        }
+
+    }
+
+    .hostingSection {
+
+        .wrapper {
+
+            .partyContent {
+                padding: 3rem 0;
+            }
+
+            .eventsContent {
+                padding: 3rem 0;
+            }
+
+        }
+        
+    }
+
+}
+
+@media (max-width: 1280px) {
+    
+    .aboutList {
+    
+        li {
+            display: flex;
+            width: 100%;
+            flex: 1 0 auto;
+        }
+    
+        li:nth-child(3),
+        li:nth-child(4) {
+            margin-bottom: 3rem;
+        }
+
+    }
+
+}
+
+@media (max-width: 780px) {
+    .desktopMenu {
+        display: none;
+    }
+    
+    .responsiveMenu {
+        width: 90%;
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        margin: 0 auto;
+        
+        .brandLogo {
+            font-family: $primaryFont;
+            font-size: calc(1.9rem * 1.75);
+            text-transform: none;
+            color: white;
+        }
+
+        .fas {
+            font-size: 1.9rem;
+            cursor: pointer;
+            color: white;
+            position: relative;
+            top: 1rem;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+            position: absolute;
+        }
+
+        .navigationMenu {
+            display: flex;
+            flex: 1 0 auto;
+            justify-content: space-between;
+            align-items: flex-end;
+            color: white;
+  
+            a {
+                font-family: $secondaryFont;
+                font-size: 1.9rem;
+                text-transform: uppercase;
+                letter-spacing: 1.9px;
+                line-height: 29px;
+            }
+
+        }
+
+        .slidingMenu {
+            background-color: $secondaryColour;
+            position: fixed;
+            z-index: 10;
+            width: 25%;
+            top: 0;
+            height: 100%;
+            right: -25%;
+            transition: all 0.5s;
+
+            a {
+                display: inline-block;
+                padding: 1rem;
+                font-family: $primaryFont;
+                border-bottom: 1px solid $primaryBlack;
+                color: white;
+                width: 100%;
+                font-size: 2rem;
+            }
+
+        }
+
+    }
+
+    .headerContent {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        height: 85vh;
+    }
+
+    .eventsContent {
+        flex-direction: column;
+    }
+
+    .galleryList {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        li:nth-child(2) {
+            margin: 1.5rem 0;
+        }
+
+    }
+
+}
