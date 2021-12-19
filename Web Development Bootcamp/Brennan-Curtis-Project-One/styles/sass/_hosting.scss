@@ -1,0 +1,104 @@
+.hostingSection {
+    background-color: $primaryBlack;
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    
+        .partyContent,
+        .hostImage,
+        .eventsContent {
+            width: 100%;
+
+            h3 {
+                color: $primaryColour;
+                font-family: $secondaryFont;
+                font-size: 3.4rem;
+                width: 100%;
+                text-align: center;
+            }
+
+            p, 
+            a {
+                font-family: $secondaryFont;
+                color: white;
+            }
+
+            p {
+                font-size: 1.99rem;
+                line-height: 1.5rem;
+                letter-spacing: 1.9px;
+                text-align: center;
+                width: 100%;
+            }
+
+            a {
+                text-align: center;
+                font-family: $primaryFont;
+                font-size: 1.75rem;
+                letter-spacing: 1.9px;
+                padding: .25rem 1.5rem;
+                background-color: $secondaryColour;
+                margin: 0 auto;
+            }
+
+        }
+
+        .partyContent {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 5rem 0;
+
+            h3 {
+                line-height: 1.5rem;
+            }
+
+            p {
+                width: 70%;
+                margin: 1rem auto;
+            }
+
+        }
+
+        .eventsContent {
+            display: flex; 
+            flex-wrap: wrap;
+            padding: 5rem 0;
+            padding-left: 3rem;
+            justify-content: center;
+
+            .imageContainer {
+                box-shadow: -20px 20px $primaryColour;
+                min-width: 305px;
+                width: 19.5%;
+                height: 305px;
+                margin: 0 auto;
+                margin-bottom: 3rem;
+            }
+
+            .eventsText {
+                margin: 0 auto;
+                width: 60%;
+            }
+
+            h3, 
+            p {
+                text-align: left;
+            }
+
+            h3 {
+                line-height: 1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            p {
+                width: 100%;
+                margin: 0 0 2rem 0;
+            }
+
+        }
+
+    }
+
+}
