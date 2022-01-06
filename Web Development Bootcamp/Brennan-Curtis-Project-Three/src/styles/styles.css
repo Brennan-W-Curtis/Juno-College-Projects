@@ -1,0 +1,728 @@
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700&display=swap");
+html {
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+article, aside, footer, header, nav, section {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+figcaption, figure, main {
+  display: block;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+b, strong {
+  font-weight: inherit;
+}
+
+b, strong {
+  font-weight: bolder;
+}
+
+code, kbd, samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+audio, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+img {
+  border-style: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button, input {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, html [type=button], [type=reset], [type=submit] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type=checkbox], [type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-cancel-button, [type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details, menu {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+canvas {
+  display: inline-block;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body, h1, h2, h3, ul, li, p, a {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+html {
+  font-size: 125%;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+h1,
+h2 {
+  font-family: "Roboto Slab", serif;
+  color: #EF233C;
+}
+
+p,
+a,
+li,
+input,
+button {
+  font-family: "Darker Grotesque", sans-serif;
+}
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+  .homeMain .wrapper {
+    flex-direction: column;
+    height: auto;
+  }
+  .homeMain .wrapper .graphicSection,
+.homeMain .wrapper .formSection {
+    width: 100%;
+  }
+  .homeMain .wrapper .brandingStatement {
+    width: 60%;
+    font-size: 1.25rem;
+  }
+
+  .formSection {
+    margin: 1rem auto 0 auto;
+  }
+  .formSection button {
+    position: relative;
+    width: 20%;
+    left: 80%;
+  }
+
+  .graphicSection .graphicCard {
+    margin: 0 auto;
+    padding: 1rem;
+  }
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .homeMain .formSection {
+    width: 70%;
+  }
+  .homeMain .formSection .brandingStatement {
+    font-size: 1.25rem;
+    margin: 0 auto;
+    width: 80%;
+  }
+  .homeMain .formSection p {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 0.9rem;
+  }
+  .homeMain .formSection form {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .homeMain .formSection button {
+    width: 30%;
+    left: 70%;
+  }
+  .homeMain .graphicSection .graphicText {
+    font-size: 0.9rem;
+  }
+
+  .galleryMain .studyControls .playButton {
+    width: 20%;
+  }
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .homeMain .displayControls {
+    margin-top: 1rem;
+  }
+  .homeMain .formSection {
+    width: 100%;
+    position: relative;
+  }
+  .homeMain .formSection .brandingStatement {
+    width: 100%;
+  }
+  .homeMain .formSection form {
+    width: 100%;
+  }
+  .homeMain .formSection input[type=text] {
+    width: 100%;
+  }
+  .homeMain .formSection button {
+    width: 30%;
+    margin-top: 1rem;
+    padding: 0.5rem 0;
+    position: relative;
+    left: 70%;
+  }
+  .homeMain .formSection p {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+  .homeMain .graphicSection {
+    width: 100%;
+  }
+
+  .galleryMain .galleryHead div:nth-child(1) {
+    width: 40%;
+  }
+  .galleryMain .galleryHead div:nth-child(2) {
+    width: 75%;
+  }
+  .galleryMain .galleryHead .galleryHeadline {
+    font-size: 1.25rem;
+  }
+  .galleryMain .galleryHead p {
+    font-size: 0.8rem;
+  }
+  .galleryMain .questionCounter {
+    font-size: 0.9rem;
+  }
+  .galleryMain .displayControls {
+    margin-top: 1rem;
+  }
+  .galleryMain .studyControls .playButton {
+    width: 100%;
+  }
+
+  .modalContainer .modalContent p {
+    font-size: 0.9rem;
+  }
+  .modalContainer .modalContent .invokeButton {
+    width: 70%;
+  }
+}
+header {
+  height: 5vh;
+}
+header .wrapper {
+  display: flex;
+}
+header .wrapper div {
+  position: relative;
+  top: 0.25rem;
+  right: 0.25rem;
+}
+header .wrapper .fas:nth-child(1) {
+  color: #EF233C;
+  font-size: 1.25rem;
+}
+header .wrapper .fas:nth-child(2) {
+  position: absolute;
+  color: white;
+  font-size: 0.8rem;
+  top: 0.25rem;
+  right: 0.3rem;
+}
+header .wrapper h1 {
+  font-size: 1rem;
+  position: relative;
+  top: 0.25rem;
+}
+
+.displayControls {
+  display: flex;
+}
+.displayControls button {
+  background-color: #2B2D42;
+  border: 1px solid #2B2D42;
+  color: white;
+  min-width: 3.75rem;
+  height: 3.75rem;
+  transition: 0.5s all;
+  cursor: pointer;
+}
+.displayControls button:hover, .displayControls button:focus {
+  background-color: white;
+  color: #2B2D42;
+  border: 1px solid #2B2D42;
+}
+
+.homeMain {
+  background-color: #EDF2F4;
+  height: 90vh;
+}
+.homeMain .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+.homeMain .wrapper section {
+  width: 50%;
+}
+.homeMain .wrapper h2 {
+  color: #EF233C;
+  font-size: 1.5rem;
+  width: 100%;
+}
+.homeMain .wrapper .formSection p {
+  margin-bottom: 1rem;
+}
+.homeMain .wrapper .formSection input[type=text] {
+  width: 100%;
+}
+.homeMain .wrapper .formSection button {
+  position: relative;
+  width: 30%;
+  left: 70%;
+}
+
+.displayGraphic {
+  display: flex;
+  justify-content: flex-start;
+}
+.displayGraphic .graphicCard {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  position: relative;
+  border: 1px solid #8D99AE;
+  height: 10rem;
+  max-width: 20rem;
+  width: 100%;
+}
+.displayGraphic .graphicCard .graphicContent {
+  position: relative;
+  display: flex;
+  bottom: 1rem;
+  transform: scale(3);
+}
+.displayGraphic .graphicCard .graphicContent .fas:nth-child(1) {
+  color: #EF233C;
+  font-size: 1.25rem;
+}
+.displayGraphic .graphicCard .graphicContent .fas:nth-child(2) {
+  position: absolute;
+  color: white;
+  font-size: 0.8rem;
+  top: 0.25rem;
+  right: 0.3rem;
+}
+.displayGraphic .graphicCard .graphicText {
+  position: absolute;
+  top: 7rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  font-family: "Darker Grotesque", sans-serif;
+}
+form input {
+  border: none;
+  margin: 0.1rem 0;
+  width: 70%;
+  background-color: #EDF2F4;
+  border-bottom: 1px solid #8D99AE;
+}
+form button {
+  border: 1px solid #2B2D42;
+  background-color: #2B2D42;
+  color: white;
+  transition: 0.5s all;
+  cursor: pointer;
+  width: 20%;
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+}
+form button:hover, form button:focus {
+  background-color: white;
+  color: #2B2D42;
+  border: 1px solid #2B2D42;
+}
+
+.galleryMain {
+  background-color: #EDF2F4;
+  min-height: 90vh;
+  padding: 1rem 0;
+}
+.galleryMain .questionCounter {
+  position: relative;
+  top: 1rem;
+}
+.galleryMain span {
+  color: #EF233C;
+  font-weight: 600;
+}
+
+.galleryHead {
+  display: flex;
+}
+.galleryHead div:nth-child(1),
+.galleryHead div:nth-child(2) {
+  width: 50%;
+}
+.galleryHead div:nth-child(1) h2,
+.galleryHead div:nth-child(2) h2 {
+  font-size: 1.5rem;
+}
+
+.cardGallery {
+  min-height: 50vh;
+  margin: 1rem 0;
+  border: 1px solid #8D99AE;
+  border-radius: 5px;
+  padding: 1rem;
+  background-color: white;
+}
+.cardGallery ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+li {
+  display: flex;
+  width: calc(100% / 5);
+  min-width: 210px;
+  margin: 1rem 0.5rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 5rem;
+  position: relative;
+  perspective: 1000px;
+  text-align: center;
+}
+li:hover .cardInner, li:focus-within .cardInner {
+  transform: rotateY(180deg);
+}
+li .cardInner {
+  position: relative;
+  border: 1px solid #8D99AE;
+  width: 100%;
+  height: 100%;
+  transition: 1s transform;
+  transform-style: preserve-3d;
+}
+li .cardInner .cardFront,
+li .cardInner .cardBack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+li .cardInner .cardFront {
+  background-color: white;
+}
+li .cardInner .cardBack {
+  background-color: white;
+  transform: rotateY(180deg);
+}
+li button {
+  position: absolute;
+  top: -25%;
+  right: -15%;
+  background: none;
+  border: none;
+}
+li button .fas {
+  color: #EF233C;
+  cursor: pointer;
+  transition: 0.25s all;
+}
+li button .fas:hover, li button .fas:focus {
+  transform: scale(1.15);
+}
+
+.studyControls {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.studyControls .playButton {
+  background-color: #2B2D42;
+  color: white;
+  border: none;
+  border: 1px solid white;
+  transition: 0.5s all;
+  cursor: pointer;
+  width: 20%;
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+}
+.studyControls .playButton:hover, .studyControls .playButton:focus {
+  background-color: white;
+  color: #2B2D42;
+  border: 1px solid #2B2D42;
+}
+
+.modalContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modalContainer .modalContent {
+  background-color: white;
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 1px solid #2B2D42;
+  width: 50%;
+  height: 15rem;
+}
+.modalContainer .modalContent p {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  top: 1rem;
+}
+.modalContainer .closeButton {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  background-color: white;
+  border: none;
+}
+.modalContainer .closeButton .fas {
+  color: #EF233C;
+  cursor: pointer;
+  transition: 0.25s all;
+}
+.modalContainer .closeButton .fas:hover, .modalContainer .closeButton .fas:focus {
+  transform: scale(1.15);
+}
+.modalContainer .invokeButton {
+  position: static;
+  background-color: #2B2D42;
+  color: white;
+  border: none;
+  border: 1px solid #2B2D42;
+  width: 20%;
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+.modalContainer .invokeButton:hover, .modalContainer .invokeButton:focus {
+  background-color: white;
+  color: #2B2D42;
+  border: 1px solid #2B2D42;
+}
+
+footer {
+  height: 5vh;
+}
+footer .wrapper {
+  display: flex;
+  justify-content: center;
+}
+footer .wrapper p {
+  position: relative;
+  top: 0.5rem;
+  font-size: 0.75rem;
+}/*# sourceMappingURL=styles.css.map */
