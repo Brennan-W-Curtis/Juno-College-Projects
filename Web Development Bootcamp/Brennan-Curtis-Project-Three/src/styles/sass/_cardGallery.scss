@@ -1,0 +1,16 @@
+.cardGallery {
+    min-height: 50vh; 
+    margin: 1rem 0;
+    border: 1px solid $tertiaryColour;
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: white;
+    
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+}
