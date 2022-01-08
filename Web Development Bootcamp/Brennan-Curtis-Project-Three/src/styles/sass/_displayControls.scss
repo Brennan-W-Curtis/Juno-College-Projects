@@ -1,0 +1,22 @@
+.displayControls {
+    display: flex;
+
+    button {
+        background-color: $primaryColour;
+        border: 1px solid $primaryColour;
+        color: white;
+        min-width: 3.75rem;
+        height: 3.75rem;
+        transition: .5s all;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            background-color: white;
+            color: $primaryColour;
+            border: 1px solid $primaryColour;
+        }
+        
+    }
+    
+}
