@@ -1,0 +1,46 @@
+.displayGraphic {
+    display: flex;
+    justify-content: flex-start;
+
+    .graphicCard {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        position: relative;
+        border: 1px solid $tertiaryColour;
+        height: 10rem;
+        max-width: 20rem;
+        width: 100%;    
+
+        .graphicContent {
+            position: relative;
+            display: flex;
+            bottom: 1rem;
+            transform: scale(3);
+    
+            .fas:nth-child(1) {
+                color: $secondaryColour;
+                font-size: 1.25rem;
+            }
+        
+            .fas:nth-child(2) {
+                position: absolute;
+                color: white;
+                font-size: .8rem;
+                top: .25rem;
+                right: .3rem;
+            }
+    
+        }
+
+        .graphicText {
+            position: absolute;
+            top: 7rem;
+        }
+
+    }
+
+}
