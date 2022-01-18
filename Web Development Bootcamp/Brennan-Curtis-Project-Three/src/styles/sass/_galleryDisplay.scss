@@ -1,0 +1,31 @@
+.galleryMain {
+    background-color: $backgroundColour; 
+    min-height: 90vh; 
+    padding: 1rem 0; 
+
+    .questionCounter {
+        position: relative;
+        top: 1rem;
+    }
+    
+    span {
+        color: $secondaryColour;
+        font-weight: 600;
+    }
+
+}
+
+.galleryHead {
+    display: flex;
+
+    div:nth-child(1),
+    div:nth-child(2) {
+        width: 50%;
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+    }
+
+}
