@@ -1,0 +1,34 @@
+header {
+    height: 5vh;
+
+    .wrapper {
+        display: flex;
+
+        div {
+            position: relative;
+            top: .25rem;
+            right: .25rem;
+        }
+
+        .fas:nth-child(1) {
+            color: $secondaryColour;
+            font-size: 1.25rem;
+        }
+
+        .fas:nth-child(2) {
+            position: absolute;
+            color: white;
+            font-size: .8rem;
+            top: .25rem;
+            right: .3rem;
+        }
+
+        h1 {
+            font-size: 1rem;
+            position: relative;
+            top: .25rem;
+        }
+
+    }
+
+}
