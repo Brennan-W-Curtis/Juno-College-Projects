@@ -1,0 +1,41 @@
+.homeMain {
+    background-color: $backgroundColour;
+    height: 90vh;
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+
+        section {
+            width: 50%;       
+        }
+        
+        h2 {
+            color: $secondaryColour;
+            font-size: 1.5rem;
+            width: 100%;
+        }
+        
+        .formSection {
+
+            p {
+                margin-bottom: 1rem;
+            }
+
+            input[type="text"] {
+                width: 100%;
+            }
+
+            button {
+                position: relative;
+                width: 30%;
+                left: 70%;
+            }
+
+        }
+
+    }
+    
+}
