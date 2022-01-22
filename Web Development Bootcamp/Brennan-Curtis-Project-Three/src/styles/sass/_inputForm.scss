@@ -1,0 +1,33 @@
+form {
+    display: flex;
+    flex-direction: column;
+    font-family: $primaryFont;
+
+    input {
+        border: none;
+        margin: .1rem 0;
+        width: 70%;
+        background-color: $backgroundColour;
+        border-bottom: 1px solid $tertiaryColour;
+    }
+
+    button {
+        border: 1px solid $primaryColour;
+        background-color: $primaryColour;
+        color: white;
+        transition: .5s all;
+        cursor: pointer;
+        width: 20%;
+        margin-top: 1rem;
+        padding: .5rem 0;
+
+        &:hover,
+        &:focus {
+            background-color: white;
+            color: $primaryColour;
+            border: 1px solid $primaryColour;
+        }
+
+    }
+
+}
