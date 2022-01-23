@@ -1,0 +1,204 @@
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+
+    .homeMain {
+    
+        .wrapper {
+            flex-direction: column;
+            height: auto;
+
+            .graphicSection,
+            .formSection {
+                width: 100%;
+            }
+
+            .brandingStatement {
+                width: 60%;
+                font-size: 1.25rem;
+            }
+
+        }
+
+    }
+
+    .formSection {
+        margin: 1rem auto 0 auto;
+
+        button {
+            position: relative;
+            width: 20%;
+            left: 80%;
+        }
+
+    }
+
+    .graphicSection {
+
+        .graphicCard {
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+    }
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+
+    .homeMain {
+
+        .formSection {
+            width: 70%;
+
+            .brandingStatement {
+                font-size: 1.25rem;
+                margin: 0 auto;
+                width: 80%;
+            }
+
+            p {
+                width: 80%;
+                margin: 0 auto;
+                font-size: .9rem;
+            }
+
+            form {
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            button {
+                width: 30%;
+                left: 70%;
+            }
+
+        }
+
+        .graphicSection {
+
+            .graphicText {
+                font-size: .9rem;
+            }
+
+        }
+
+    }
+
+    .galleryMain {
+
+        .studyControls {
+
+            .playButton {
+                width: 20%;
+            }
+    
+        }
+
+    }
+
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+    .homeMain {
+
+        .displayControls {
+            margin-top: 1rem;
+        }
+   
+        .formSection {
+            width: 100%;
+            position: relative;
+    
+            .brandingStatement {
+                width: 100%;
+            }
+
+            form {
+                width: 100%;
+            }
+
+            input[type="text"] {
+                width: 100%;
+            }
+
+            button {
+                width: 30%;
+                margin-top: 1rem;
+                padding: .5rem 0;
+                position: relative;
+                left: 70%;
+            }
+
+            p {
+                width: 100%;
+                font-size: .9rem;
+            }
+    
+        }
+
+        .graphicSection {
+            width: 100%;
+        }       
+        
+    }
+
+    .galleryMain {
+
+        .galleryHead {
+
+            div:nth-child(1) {
+                width: 40%;
+            }
+
+            div:nth-child(2) {
+                width: 75%;
+            }
+
+            .galleryHeadline {
+                font-size: 1.25rem;
+            }
+
+            p {
+                font-size: .8rem;
+            }
+
+        }
+
+        .questionCounter {
+            font-size: .9rem;
+        }
+
+        .displayControls {
+            margin-top: 1rem;
+        }
+
+        .studyControls {
+
+            .playButton {
+                width: 100%;
+            }
+
+        }
+        
+    }
+
+    .modalContainer {
+
+        .modalContent {
+            
+            p {
+                font-size: .9rem;
+            }
+
+            .invokeButton {
+                width: 70%;
+            }
+
+        }
+
+    }
+
+}
