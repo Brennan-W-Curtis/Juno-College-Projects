@@ -1,0 +1,26 @@
+.studyControls {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+    .playButton {
+        background-color: $primaryColour;
+        color: white;
+        border: none;
+        border: 1px solid white;
+        transition: .5s all;
+        cursor: pointer;
+        width: 20%;
+        margin-top: 1rem;
+        padding: .5rem 0;
+    
+        &:hover,
+        &:focus {
+            background-color: white;
+            color: $primaryColour;
+            border: 1px solid $primaryColour;
+        }
+        
+    }
+    
+}
